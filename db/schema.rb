@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180131232129) do
+ActiveRecord::Schema.define(version: 20180131232858) do
+
+  create_table "menus", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "profile_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["profile_id"], name: "index_menus_on_profile_id"
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.string   "name"
