@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'nay3kor/page'
+
   resources :menus
   resources :profiles
   get 'home/page'
